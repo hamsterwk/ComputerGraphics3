@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
+    <head>
+        <title>武大哪个地方我没去过？</title>
+        <link rel="stylesheet" href="样式.css" />
+        <script src="库/raphael.min.js" defer="defer" />
+        <script src="库/html2canvas.min.js" defer="defer" />
+        <script src="网站识别.js" defer="defer" />
+        <script src="脚本.js" defer="defer" />
+    </head>
+    <body>
+        <footer>
+            <div>
+                作者：Hamsterwk，本项目改编自制县等级中国版©进智，属自由及开放源码软件，以<a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero通用公众特许条款第3版</a>发布，原项目源码可于<a href="https://github.com/miklcct/zhixian-dengji-zhongguo-ban">GitHub</a>取得。
+            </div>
+			<div id="分享">
+				<span id="hint">请输入你的名字，然后填充下方地图，最后生成图片！</span>
+				<p></p>
+				<input id="inputName" value="我" onclick="document.getElementById('inputName').value=''" onblur="dealChange()" onchange="dealChange()"></input>
+				<a id="btn1">产生图片</a>
+			</div>
+        </footer>
+        <div id="地图">
+            <h1> <text id="userName">我</text> 的精武值：<span id="等级">0</span></h1>
+            <table id="图例">
+                <tr class="选择" data-级别="4"><td>4</td><td class="选择">经常去这里</td></tr>
+                <tr class="选择" data-级别="3"><td>3</td><td class="选择">去过好几次</td></tr>
+                <tr class="选择" data-级别="2"><td>2</td><td class="选择">去过一两次</td></tr>
+                <tr class="选择" data-级别="1"><td>1</td><td class="选择">曾经有路过</td></tr>
+                <tr class="选择" data-级别="0"><td>0</td><td class="选择">从来没去过</td></tr>
+            </table>
+            <table id="表格">
+                <tr>
+                    <th/>
+                </tr>
+                <tr><td class="选择" data-级别="4">经常去这里</td></tr>
+                <tr><td class="选择" data-级别="3">去过好几次</td></tr>
+                <tr><td class="选择" data-级别="2">去过一两次</td></tr>
+                <tr><td class="选择" data-级别="1">曾经有路过</td></tr>
+                <tr><td class="选择" data-级别="0">从来没去过</td></tr>
+            </table>
+        </div>
+		<img id="finalImg"></img>
+    </body>
+</html>
