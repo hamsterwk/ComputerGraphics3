@@ -47,7 +47,7 @@ window.onload = function init()
 };
 
 function Init(){
-
+	gl.enable(gl.DEPTH_TEST)
 	vertices = [
 		vec3(-0.5,-0.5,-0.5),
 		vec3( 0.5,-0.5,-0.5),
